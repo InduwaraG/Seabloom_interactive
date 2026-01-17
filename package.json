@@ -1,0 +1,13 @@
+{
+  "name": "seabloom-interactive",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node .dev-server.js",
+    "serve": "node .dev-server.js"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "mime": "^3.0.0"
+  }
+}

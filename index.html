@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Seabloom Interactive — Indie Game Studio (Fictional)</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.jpeg">
+  <link rel="alternate icon" href="images/favicon.png">
+  <meta name="theme-color" content="#071025">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
+  <script src="dev-reload.js" defer></script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="images/logo.jpeg" alt="Seabloom Interactive logo" width="140" />
+      </div>
+      <nav class="main-nav" role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="#" aria-current="page">Home</a></li>
+          <li><a href="#services">About</a></li>
+          <li><a href="#portfolio">Games</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home" aria-label="Hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>Seabloom Interactive — evocative indie games from Australia</h1>
+        <p class="lede">A small Adelaide-based studio crafting atmospheric 2D exploration games inspired by southern coastline ecology. We ship polished single-player experiences and run community playtests.</p>
+        <div class="hero-ctas">
+          <button id="quoteBtn" class="btn primary">Join playtest list</button>
+          <a href="#portfolio" class="btn secondary">Explore our games</a>
+        </div>
+      </div>
+      <figure class="hero-image" aria-hidden="true">
+        <img src="images/image1.jpeg" alt="Illustrative scene from a coastal exploration game" />
+      </figure>
+    </div>
+  </section>
+
+  <section id="services" class="services section" aria-labelledby="services-heading">
+    <div class="container">
+      <h2 id="services-heading">What we do</h2>
+      <p class="section-intro">Design, art and community-driven playtesting for small-batch indie titles.</p>
+
+      <div class="cards">
+        <article class="card">
+          <img src="images/img2.jpeg" alt="Concept art and sketches" />
+          <h3>Concept & prototyping</h3>
+          <p>Rapid prototypes and design pivots to find compelling player interactions and mood.</p>
+        </article>
+
+        <article class="card">
+          <img src="images/img3.jpeg" alt="Pixel art and animation" />
+          <h3>Art & audio</h3>
+          <p>Hand-crafted 2D art and bespoke soundscapes to create an immersive atmosphere.</p>
+        </article>
+
+        <article class="card">
+          <img src="images/img 7.jpeg" alt="Playtest session" />
+          <h3>Playtesting & release</h3>
+          <p>Community playtests, feedback cycles and small-batch releases on PC and console stores.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="testimonials section" aria-labelledby="portfolio-heading">
+    <div class="container">
+      <h2 id="portfolio-heading">Selected titles</h2>
+
+      <div class="testimonial-grid">
+        <figure class="testi">
+          <img src="images/img4.jpeg" alt="Screenshot: 'Brine Drift' gameplay" />
+          <blockquote>
+            "Brine Drift is a quiet, rewarding exploration game that rewards curiosity and patience."
+          </blockquote>
+          <figcaption>— community review</figcaption>
+        </figure>
+
+        <figure class="testi">
+          <img src="images/img5.jpeg" alt="Screenshot: 'Kelpbound' landscape" />
+          <blockquote>
+            "Kelpbound's visuals and sound design create a memorable coastal atmosphere."
+          </blockquote>
+          <figcaption>— press preview</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="faq section" aria-labelledby="faq-heading">
+    <div class="container">
+      <h2 id="faq-heading">Frequently asked questions</h2>
+      <p class="section-intro">Quick answers about our development process, community playtests and platform support.</p>
+
+      <div class="accordion" id="faq-accordion">
+        <div class="accordion-item">
+          <h3>
+            <button aria-expanded="false" aria-controls="acc1-content" id="acc1" class="accordion-btn">
+              How can I join a playtest?
+              <span class="chev" aria-hidden="true">▾</span>
+            </button>
+          </h3>
+          <div id="acc1-content" role="region" aria-labelledby="acc1" class="accordion-content" hidden>
+            <p>Sign up to our playtest list via the "Join playtest list" button in the hero. We run scheduled community playtests and occasional closed sessions — we’ll email participants with platform, build and timing details.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3>
+            <button aria-expanded="false" aria-controls="acc2-content" id="acc2" class="accordion-btn">
+              Which platforms do you release on?
+              <span class="chev" aria-hidden="true">▾</span>
+            </button>
+          </h3>
+          <div id="acc2-content" role="region" aria-labelledby="acc2" class="accordion-content" hidden>
+            <p>We primarily target PC (Steam) and selected console platforms. Release platforms are chosen per‑title based on scope and community demand; details are announced on each project's page.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3>
+            <button aria-expanded="false" aria-controls="acc3-content" id="acc3" class="accordion-btn">
+              How can I report bugs or give feedback?
+              <span class="chev" aria-hidden="true">▾</span>
+            </button>
+          </h3>
+          <div id="acc3-content" role="region" aria-labelledby="acc3" class="accordion-content" hidden>
+            <p>Feedback from playtests is collected via survey links and in‑session notes. For bug reports or post-release feedback, email hello@seabloomgames.au with a clear description, platform, and steps to reproduce; we prioritise fixes based on severity and player impact.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-about">
+        <img src="images/logo.jpeg" alt="Seabloom Interactive footer logo" width="120" />
+        <p>Seabloom Interactive — indie game studio focused on small, atmospheric titles (fictional).</p>
+      </div>
+
+      <div class="footer-contact" id="contact">
+        <h4>Contact</h4>
+        <address>
+          PO Box 99<br />
+          Adelaide SA 5001<br />
+          <span>Phone:</span> 0401 234 567<br />
+          <span>Email:</span> hello@seabloomgames.au
+        </address>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="#services">About</a></li>
+          <li><a href="#portfolio">Games</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-credits">
+      <div class="container">
+        <small>© 2026 Seabloom Interactive (fictional) — All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
