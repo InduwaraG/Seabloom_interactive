@@ -10,6 +10,7 @@
   <meta name="theme-color" content="#071025">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
+  
   <script src="dev-reload.js" defer></script>
 </head>
 <body>
@@ -30,13 +31,13 @@
     </div>
   </header>
 
-  <section class="hero" id="home" aria-label="Hero">
+  <section class="hero" id="home" aria-label="Hero" data-stitch="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
         <h1>Seabloom Interactive — evocative indie games from Australia</h1>
         <p class="lede">A small Adelaide-based studio crafting atmospheric 2D exploration games inspired by southern coastline ecology. We ship polished single-player experiences and run community playtests.</p>
         <div class="hero-ctas">
-          <button id="quoteBtn" class="btn primary">Join playtest list</button>
+          <button id="quoteBtn" class="btn primary" >Join playtest list</button>
           <a href="#portfolio" class="btn secondary">Explore our games</a>
         </div>
       </div>
@@ -46,7 +47,7 @@
     </div>
   </section>
 
-  <section id="services" class="services section" aria-labelledby="services-heading">
+  <section id="services" class="services section" aria-labelledby="services-heading" data-stitch="services">
     <div class="container">
       <h2 id="services-heading">What we do</h2>
       <p class="section-intro">Design, art and community-driven playtesting for small-batch indie titles.</p>
@@ -73,7 +74,7 @@
     </div>
   </section>
 
-  <section id="portfolio" class="testimonials section" aria-labelledby="portfolio-heading">
+  <section id="portfolio" class="testimonials section" aria-labelledby="portfolio-heading" data-stitch="testimonials">
     <div class="container">
       <h2 id="portfolio-heading">Selected titles</h2>
 
@@ -97,7 +98,8 @@
     </div>
   </section>
 
-  <section id="faq" class="faq section" aria-labelledby="faq-heading">
+  
+  <section id="faq" class="faq section" aria-labelledby="faq-heading" data-stitch="accordion">
     <div class="container">
       <h2 id="faq-heading">Frequently asked questions</h2>
       <p class="section-intro">Quick answers about our development process, community playtests and platform support.</p>

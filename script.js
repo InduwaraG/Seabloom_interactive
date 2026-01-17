@@ -45,43 +45,28 @@ function toggleAccordion(btn) {
   }
 }
 
-const quoteBtn = document.getElementById('quoteBtn');
-if (quoteBtn) {
-  quoteBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    if (!document.getElementById('playtest-form')) {
-      const form = document.createElement('form');
-      form.id = 'playtest-form';
-      form.className = 'playtest-form';
-      form.innerHTML = `
-        <label for="playtest-email" class="visually-hidden">Email</label>
-        <input id="playtest-email" name="email" type="email" placeholder="your.email@example.com" required />
-        <button type="submit" class="btn primary">Sign up</button>
-        <button type="button" id="playtest-cancel" class="btn secondary">Cancel</button>
-      `;
-      quoteBtn.parentNode.appendChild(form);
-
-      const input = form.querySelector('#playtest-email');
-      input.focus();
-
-      form.addEventListener('submit', (ev) => {
-        ev.preventDefault();
-        const email = input.value.trim();
-        if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-          input.setAttribute('aria-invalid', 'true');
-          input.focus();
-          return;
-        }
-        const msg = document.createElement('div');
-        msg.className = 'cta-feedback';
-        msg.setAttribute('role', 'status');
-        msg.textContent = `Thanks — ${email} is on the playtest list.`;
-        form.replaceWith(msg);
-        setTimeout(() => msg.remove(), 6000);
-      });
-
-      const cancel = document.getElementById('playtest-cancel');
-      cancel.addEventListener('click', () => form.remove());
+function updateActiveNavigation() {
+  const navLinks = document.querySelectorAll('.main-nav a');
+  const sections = document.querySelectorAll('section[id]');
+  
+  let currentSection = '';
+  
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    
+    if (window.scrollY >= sectionTop - 100) {
+      currentSection = section.getAttribute('id');
+    }
+  });
+  
+  navLinks.forEach(link => {
+    link.removeAttribute('aria-current');
+    const href = link.getAttribute('href');
+    if (href === '#' + currentSection || (currentSection === 'home' && href === '#')) {
+      link.setAttribute('aria-current', 'page');
     }
   });
 }
+
+window.addEventListener('scroll', updateActiveNavigation, { passive: true });
+updateActiveNavigation();

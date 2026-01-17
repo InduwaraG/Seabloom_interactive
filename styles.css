@@ -1,5 +1,3 @@
-/* styles.css - Seabloom Interactive */
-
 :root{
   --bg:#071025;
   --card:#0c1724;
@@ -55,9 +53,15 @@ body{
   text-decoration:none;
   font-weight:600;
   padding:8px 10px;
+  transition: color 240ms ease;
 }
-.main-nav a[aria-current="page"]{color:var(--accent)}
+.main-nav a[aria-current="page"]{
+  color:var(--accent);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 6px;
+}
 
+/* HERO STITCH: Two-column layout with CTA buttons */
 .hero{
   padding:64px 0;
   background: radial-gradient(900px 400px at 10% 10%, rgba(47,179,179,0.06), transparent 20%), linear-gradient(180deg, rgba(2,8,15,0.15), transparent 40%);
@@ -109,6 +113,7 @@ body{
   box-shadow: 0 8px 24px rgba(255,107,107,0.12);
 }
 
+/* SERVICES STITCH: 3-card grid layout */
 .section{ padding:56px 0;}
 .services .section-intro{ color:var(--muted); margin-top:6px; margin-bottom:24px;}
 .cards{
@@ -134,6 +139,7 @@ body{
   filter: contrast(1.02) saturate(1.05);
 }
 
+/* TESTIMONIALS STITCH: 2-column review layout */
 .testimonials .testimonial-grid{
   display:flex;
   gap:20px;
@@ -152,6 +158,7 @@ body{
 }
 .testi img{width:72px;height:72px;border-radius:8px;object-fit:cover}
 
+/* FAQ ACCORDION STITCH: Expandable Q&A with smooth transitions */
 .accordion{
   margin-top:20px;
   max-width:900px;
